@@ -1,32 +1,41 @@
-const optionsTissu = [
-    { couleur: 'Jaune', code: '#e2d047', image: './images/option-1-jaune.png', price: 12.30 },
-    { couleur: 'Orange', code: '#f1722f', image: './images/option-1-orange.png', price: 12.00 },
-    { couleur: 'Violet', code: '#bd3ad8', image: './images/option-1-violet.png', price: 12.10 }
-];
-const optionsPoche = [
-    { couleur: 'Bleu', code: '#11119e', image: './images/option-2-bleu.png', price: 8.30 },
-    { couleur: 'Fuchsia', code: '#991157', image: './images/option-2-fuchsia.png', price: 8.50 },
-    { couleur: 'Rouge', code: '#d31431', image: './images/option-2-rouge.png', price: 8.10 },
-    { couleur: 'vert', code: '#a1cc16', image: './images/option-2-vert.png', price: 8.75 }
-];
-const couleurText = [
-    { couleur: 'Blanc', code: '#FFFFFF' },
-    { couleur: 'Noir', code: '#000000' },
-    { couleur: 'Bleu', code: '#11119e' },
-    { couleur: 'Fuchsia', code: '#991157' },
-    { couleur: 'Rouge', code: '#d31431' },
-    { couleur: 'vert', code: '#a1cc16' },
-    { couleur: 'Jaune', code: '#e2d047' },
-    { couleur: 'Orange', code: '#f1722f' }
-];
+// const optionsTissu = [
+//     { couleur: 'Jaune', code: '#e2d047', image: './images/option-1-jaune.png', price: 12.30 },
+//     { couleur: 'Orange', code: '#f1722f', image: './images/option-1-orange.png', price: 12.00 },
+//     { couleur: 'Violet', code: '#bd3ad8', image: './images/option-1-violet.png', price: 12.10 }
+// ];
+// const optionsPoche = [
+//     { couleur: 'Bleu', code: '#11119e', image: './images/option-2-bleu.png', price: 8.30 },
+//     { couleur: 'Fuchsia', code: '#991157', image: './images/option-2-fuchsia.png', price: 8.50 },
+//     { couleur: 'Rouge', code: '#d31431', image: './images/option-2-rouge.png', price: 8.10 },
+//     { couleur: 'vert', code: '#a1cc16', image: './images/option-2-vert.png', price: 8.75 }
+// ];
+// const couleurText = [
+//     { couleur: 'Blanc', code: '#FFFFFF' },
+//     { couleur: 'Noir', code: '#000000' },
+//     { couleur: 'Bleu', code: '#11119e' },
+//     { couleur: 'Fuchsia', code: '#991157' },
+//     { couleur: 'Rouge', code: '#d31431' },
+//     { couleur: 'vert', code: '#a1cc16' },
+//     { couleur: 'Jaune', code: '#e2d047' },
+//     { couleur: 'Orange', code: '#f1722f' }
+// ];
 
-const variables = { selectedTissu: "Violet", selectedPoche: "Rouge", customText: '', selectedTextColor: 'Noir', textOption: true, prixLettre: 1.80 };
+// const variables = { selectedTissu: "Violet", selectedPoche: "Rouge", customText: '', selectedTextColor: 'Noir', textOption: true, prixLettre: 1.80 };
 
-const bulletTissuArray = [];
-const bulletTexteArray = [];
-const bulletPocheArray = [];
-
-function repricing() {
+// const bulletTissuArray = [];
+// const bulletTexteArray = [];
+// const bulletPocheArray = [];
+import { optionsTissu } from "./data.js";
+import { optionsPoche } from "./data.js";
+import {  couleurText} from "./data.js";
+import { BulletTissu } from "./bulletTissuClass.js";
+import { BulletTexte } from "./bulletTexteClass.js";
+import { BulletPoche } from "./bulletPocheClass.js";
+import { bulletTissuArray } from "./data.js";
+import {  bulletTexteArray} from "./data.js";
+import { bulletPocheArray } from "./data.js";
+import { variables } from "./data.js";
+export function repricing() {
     let calculatedPrice = 0;
     calculatedPrice += bulletTissuArray.find(tissu => tissu.getCouleur == variables.selectedTissu).getPrice;
 

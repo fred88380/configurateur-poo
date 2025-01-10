@@ -1,4 +1,8 @@
-class BulletPoche extends Bullet {
+import { Bullet} from "./bullet.js";
+import { variables } from "./data.js";
+import { bulletPocheArray } from "./data.js";
+import { repricing } from "./configurateur.js";
+export class BulletPoche extends Bullet {
     constructor(couleur, code, image, price) {
       super(couleur, code, image, price);
       this.html.addEventListener("click", (event) => {

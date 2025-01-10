@@ -1,4 +1,4 @@
-class Bullet {
+export class Bullet {
     constructor(couleur,code,image,price) {
         this.couleur = couleur;
         this.code = code;
